@@ -1,1 +1,59 @@
-
+﻿<server-response response-data="ServerResponse" selected-tab="ModalTab"></server-response>
+<navigation-bar></navigation-bar>
+<div class="container">
+    <section class="row">
+        <article class="col-xs-6">
+            <ol class="breadcrumb">
+                <li><a href="#/">Home</a></li>
+                <li>2016</li>
+            </ol>
+        </article>
+        <article class="col-xs-6">
+            <button class="btn btn-default pull-right" ng-click="SearchToggle($event)" ng-show="HideSearch"><i class="glyphicon glyphicon-search"></i></button>
+            <div class="input-group pull-right animate-hide" ng-hide="HideSearch">
+                <input type="search" class="form-control" ng-model="SearchInput" ng-keydown="SearchFor($event)" autocomplete="off">
+                <div class="hide shadow" id="searchResults" style="width: 100%; position: absolute; margin-top: 35px; background-color: #fff;">
+                    <section style="padding: 10px 15px;" ng-repeat="car in JSONResults | orderBy: 'name'"><a href="#/">{{car.name}}</a></section>
+                </div>
+                <span class="input-group-addon" style="cursor: pointer;" ng-click="SearchToggle($event)" ng-hide="HideSearch"><i class="glyphicon glyphicon-search"></i></span>
+            </div>
+        </article>
+    </section>
+</div>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Chicago Auto Show</h1>
+        <p>Here you will find some of my personal pictures from the last years event.</p>
+    </div>
+</div>
+<div class="container">
+    <section class="row">
+        <article class="col-md-4" ng-repeat="itm in articleEntry">
+            <div class="thumbnail">
+                <img ng-src="/assets/img/{{itm.image}}">
+                <div class="caption">
+                    <h3>{{itm.make}} <small>{{itm.model}}</small></h3>
+                    <p class="text-right"><a href="#/" class="btn btn-default" role="button">Read More</a></p>
+                </div>
+            </div>
+        </article>
+    </section>
+</div>
+<hr />
+<div class="container">
+    <section class="row">
+        <article class="hidden-xs col-sm-4"></article>
+        <article class="col-sm-4">
+            <h4>Sign up for our newsletter.</h4>
+            <form name="frmNewsletter" novalidate>
+                <div class="form-group">
+                    <label for="Email">Email Address</label><br />
+                    <input type="email" class="form-control" name="Email" ng-model="Email" placeholder="example@email.com" />
+                </div>
+                <button class="btn btn-primary" ng-click="Subscribe()">Subscribe</button>
+            </form>
+        </article>
+        <article class="hidden-xs col-sm-4"></article>
+    </section>
+</div>
+<hr />
