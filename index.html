@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            padding: 75px 0;
+        }
+
+        .breadcrumb {
+            background-color: transparent;
+        }
+
+        div.tab-pane {
+            padding-top: 15px;
+        }
+
+        .shadow {
+            -webkit-box-shadow: 4px 4px 4px 4px #ccc;   /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+            -moz-box-shadow: 4px 4px 4px 4px #ccc;      /* Firefox 3.5 - 3.6 */
+            box-shadow: 4px 4px 4px 4px #ccc;           /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+        }
+
+        .modal-dialog {
+            z-index: inherit;
+        }
+
+        ::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .animate-hide.ng-hide {
+           width: 0;
+        }
+
+        .animate-hide {
+           -webkit-transition: all linear .5s;
+           -moz-transition: all linear .5s;
+           -o-transition: all linear .5s;
+           transition: all linear .5s;
+           width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Begin page content -->
+    <div class="container-fluid">
+        <div class="row" ng-view=""></div>
+    </div>
+
+    <script src="assets/libs/angular.js"></script>
+    <script src="assets/libs/angular-route.js"></script>
+    <script src="assets/libs/angular-animate.js"></script>
+    <script src="app/app.js"></script>
+</body>
+</html>
