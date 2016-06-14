@@ -11,3 +11,5 @@ The data returned by the search can be anything you want. A list of your favorit
 You can use any frameworks or libraries you wish, however we’d like to see a base of jQuery and the search logic coded by hand and not provided by a plugin. Want to show off some JavaScript MV* or JavaScript Unit Tests? That’s awesome and extra credit will be given. 
 
 Place your search component in the below layout.  The layout should be fluid and responsive.  It should also work well across all modern browsers.  An email address is required to sign up for a newsletter.  The newsletter sign up form submission does not need to go anywhere.
+
+![wireframe](https://cloud.githubusercontent.com/assets/19931769/16050215/6dc6b0b8-3220-11e6-9ef7-44459438517e.png)
